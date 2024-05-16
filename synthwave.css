@@ -52,18 +52,31 @@ header ul li {
 }
 
 header ul li a {
-    color: #ff00ff;
+    color: #ffffff;
     text-decoration: none;
-    text-shadow: 1px 1px #000000;
     font-weight: bold; /* Make the text bolder */
     font-size: 14px; /* Make the text smaller */
     display: inline-block;
     text-align: center;
     line-height: 60px; /* Vertically center the text */
+    position: relative; /* Required for the underline effect */
 }
 
-header ul li a:hover {
-    text-decoration: underline;
+header ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px; /* Adjust position of the underline */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header ul li a:hover::after {
+    width: 100%;
 }
 
 footer {
