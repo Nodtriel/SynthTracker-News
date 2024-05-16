@@ -4,7 +4,7 @@
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: url('background.png') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     margin: 0;
@@ -111,4 +111,17 @@ footer p {
 /* Add more space between each bullet point */
 ul li {
     margin-bottom: 15px; /* Adjust the value to increase/decrease spacing */
+}
+
+/* Responsive background for higher resolutions */
+@media only screen and (min-width: 2560px) {
+    body {
+        background-image: url('background-2560.jpg');
+    }
+}
+
+@media only screen and (min-width: 3840px) {
+    body {
+        background-image: url('background-3840.jpg');
+    }
 }
