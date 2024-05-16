@@ -95,6 +95,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align items at the start */
+    height: 100%;
 }
 
 .content-container {
@@ -107,6 +108,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align items at the start */
+    flex-grow: 1;
 }
 
 /* Specific styles for the news section */
