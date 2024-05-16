@@ -24,36 +24,13 @@ header h1, footer p {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    /* Apply background only if not on news page */
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
 
-/* Remove background for news section's parent container */
-#news .content-container {
-    background: none;
-    padding: 0;
-}
-
-/* Navigation Styles */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #ff00ff;
-    text-decoration: none;
-    text-shadow: 1px 1px #000000;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+/* Specific styles for the news section */
+#news {
+    background: none; /* Remove the background from the #news section */
 }
 
 /* Styles for the News Page */
