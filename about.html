@@ -6,6 +6,7 @@
     <title>About - My Synthwave Website</title>
     <link rel="stylesheet" href="synthwave.css">
     <script src="loadHeaderFooter.js" defer></script>
+    <script src="pong.js" defer></script> <!-- Include the pong.js script -->
 </head>
 <body>
     <header id="header"></header>
@@ -13,6 +14,15 @@
         <div class="content-container">
             <h1>About Us</h1>
             <p>This is the about section where we talk about our website.</p>
+            <h2>Our Mission</h2>
+            <p>We strive to deliver the best synthwave experience.</p>
+            
+            <!-- Pong Game Section -->
+            <section id="pong-game">
+                <h2>Pong Game</h2>
+                <canvas id="pongCanvas" width="800" height="400"></canvas>
+                <div id="pongScore"></div>
+            </section>
         </div>
     </main>
     <footer id="footer"></footer>
