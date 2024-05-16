@@ -84,3 +84,8 @@ footer p {
 .news-article + .news-article {
     margin-top: 20px;
 }
+
+/* Add more space between each bullet point */
+ul li {
+    margin-bottom: 15px; /* Adjust the value to increase/decrease spacing */
+}
