@@ -11,13 +11,21 @@ body {
 header, footer {
     background: rgba(0, 0, 0, 0.8);
     padding: 10px;
-    text-align: center;
     color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 60px; /* Adjust this size as needed */
 }
 
 header nav {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
