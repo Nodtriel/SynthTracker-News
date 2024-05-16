@@ -15,7 +15,34 @@ header, footer {
     color: #ffffff;
 }
 
-header h1, footer p {
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #ff00ff;
+    text-decoration: none;
+    text-shadow: 1px 1px #000000;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
     margin: 0;
 }
 
@@ -29,8 +56,9 @@ header h1, footer p {
 }
 
 /* Specific styles for the news section */
-#news {
-    background: none; /* Remove the background from the #news section */
+#news-container {
+    background: none; /* Remove the background from the #news-container */
+    padding: 0; /* Remove padding */
 }
 
 /* Styles for the News Page */
