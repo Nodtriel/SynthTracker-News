@@ -90,6 +90,13 @@ footer p {
 }
 
 /* Container for content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .content-container {
     max-width: 800px;
     margin: 20px auto;
