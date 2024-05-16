@@ -24,12 +24,13 @@ header h1, footer p {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
+    /* Apply background only if not on news page */
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
 
 /* Remove background for news section's parent container */
-.news-container {
+#news .content-container {
     background: none;
     padding: 0;
 }
