@@ -36,6 +36,8 @@ header, footer {
 header nav {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 header ul {
@@ -46,13 +48,18 @@ header ul {
 }
 
 header ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* Adjust spacing between items */
 }
 
 header ul li a {
     color: #ff00ff;
     text-decoration: none;
     text-shadow: 1px 1px #000000;
+    font-weight: bold; /* Make the text bolder */
+    font-size: 14px; /* Make the text smaller */
+    display: inline-block;
+    text-align: center;
+    line-height: 60px; /* Vertically center the text */
 }
 
 header ul li a:hover {
