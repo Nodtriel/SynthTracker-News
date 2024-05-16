@@ -11,9 +11,10 @@ async function loadNewsArticles() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);  // Check the structure of the data returned
-        
+        console.log('Fetched data:', data);  // Check the structure of the data returned
+
         const articles = data.values.slice(1); // Remove header row
+        console.log('Articles:', articles);  // Log articles to check if data is correctly parsed
 
         articles.forEach(article => {
             const [title, date, content] = article;
