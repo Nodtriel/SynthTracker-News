@@ -1,6 +1,9 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
@@ -21,6 +24,9 @@ header, footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .logo {
