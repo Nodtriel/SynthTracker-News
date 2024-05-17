@@ -1,34 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-    loadNewsArticles();
-});
-
-async function loadNewsArticles() {
-    const newsContainer = document.getElementById('news-articles');
-    const apiKey = 'AIzaSyA_k1fBULwhpEm8UDGM6wIs230iK3RgsuM';
-    const sheetId = '1nsMPcR6FuyyRiDCTlCiYB_koi5b43oRdbyQ27YePs7I';
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1?key=${apiKey}`;
+document.addEventListener('DOMContentLoaded', async () => {
+    const newsContainer = document.getElementById('news-container');
 
     try {
-        const response = await fetch(url);
+        const response = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1nsMPcR6FuyyRiDCTlCiYB_koi5b43oRdbyQ27YePs7I/values/Sheet1?key=AIzaSyA_k1fBULwhpEm8UDGM6wIs230iK3RgsuM');
         const data = await response.json();
-        console.log('Fetched data:', data);  // Check the structure of the data returned
 
-        const articles = data.values.slice(1); // Remove header row
-        console.log('Articles:', articles);  // Log articles to check if data is correctly parsed
+        if (data && data.values) {
+            data.values.slice(1).forEach(row => {
+                const title = row[0];
+                const date = row[1]; // Treat date as a string
+                const content = row[2];
 
-        articles.forEach(article => {
-            const [title, date, content] = article;
+                const articleElement = document.createElement('div');
+                articleElement.classList.add('news-article');
 
-            const articleElement = document.createElement('div');
-            articleElement.classList.add('news-article');
-            articleElement.innerHTML = `
-                <h3>${title}</h3>
-                <p><small>${new Date(date).toLocaleDateString()}</small></p>
-                <p>${content}</p>
-            `;
-            newsContainer.appendChild(articleElement);
-        });
+                articleElement.innerHTML = `
+                    <h3>${title}</h3>
+                    <p><strong>${date}</strong></p>
+                    <p>${content}</p>
+                `;
+
+                newsContainer.appendChild(articleElement);
+            });
+        }
     } catch (error) {
         console.error('Error fetching news articles:', error);
     }
-}
+});
