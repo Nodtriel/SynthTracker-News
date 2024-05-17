@@ -111,6 +111,11 @@ main {
     flex-grow: 1;
 }
 
+#pongCanvas {
+    border: 2px solid #ffffff;
+    background-color: #000000;
+}
+
 /* Specific styles for the news section */
 #news-container {
     background: none; /* Remove the background from the #news-container */
