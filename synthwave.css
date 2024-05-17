@@ -192,12 +192,18 @@ ul li {
 /* Responsive background for higher resolutions */
 @media only screen and (min-width: 2560px) {
     body {
-        background-image: url('background-2560.jpg');
+        background-size: cover; /* Adjust the background size */
     }
 }
 
 @media only screen and (min-width: 3840px) {
     body {
-        background-image: url('background-3840.jpg');
+        background-size: cover; /* Adjust the background size */
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .content-container {
+        max-width: 90%;
     }
 }
